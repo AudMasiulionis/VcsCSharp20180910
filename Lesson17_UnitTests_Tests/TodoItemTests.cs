@@ -24,6 +24,7 @@ namespace Lesson17_UnitTests_Tests
         {
             //arrange
             var todo = new ToDoItem();
+
             //act
             todo.Start();
             todo.Start();
