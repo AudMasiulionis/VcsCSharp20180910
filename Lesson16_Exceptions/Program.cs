@@ -19,7 +19,7 @@ namespace Lesson16_Exceptions
             const string currentUserName = "admin";
             const string currentPassword = "admin";
 
-            if (userName != currentUserName || password != currentPassword) )
+            if (userName != currentUserName || password != currentPassword)
             {
                 throw new InvalidPasswordException("Wrong credentials");
             }
