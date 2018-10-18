@@ -10,12 +10,27 @@ namespace Lesson15_ValueTypes
     {
         static void Main(string[] args)
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
+            var item = new ToDoItem();
+            item.Start();
+        }
 
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+        public static void PrintSize(Size size)
+        {
+            switch (size)
+            {
+                case Size.S:
+                    Console.WriteLine("Small");
+                    break;
+                case Size.M:
+                    Console.WriteLine("Medium");
+                    break;
+                case Size.L:
+                    Console.WriteLine("Large");
+                    break;
+                case Size.XL:
+                    Console.WriteLine("Extra - Large");
+                    break;
+            }
         }
     }
 }

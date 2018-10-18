@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3D2A1BCA-057B-4063-961C-6CF089A29A93}</ProjectGuid>
+    <ProjectGuid>{E229F447-F79B-49C0-BEAB-7D220E4C7B78}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Lesson15_ValueTypes</RootNamespace>
-    <AssemblyName>Lesson15_ValueTypes</AssemblyName>
+    <RootNamespace>Lesson17_UnitTests</RootNamespace>
+    <AssemblyName>Lesson17_UnitTests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,14 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Fraction.cs" />
-    <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Size.cs" />
-    <Compile Include="Status.cs" />
-    <Compile Include="ToDoItem.cs" />
-    <Compile Include="TShirt.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

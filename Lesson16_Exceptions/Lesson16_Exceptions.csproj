@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3D2A1BCA-057B-4063-961C-6CF089A29A93}</ProjectGuid>
+    <ProjectGuid>{34C2E1C0-6620-466C-928B-F68DCF89E26B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Lesson15_ValueTypes</RootNamespace>
-    <AssemblyName>Lesson15_ValueTypes</AssemblyName>
+    <RootNamespace>Lesson16_Exceptions</RootNamespace>
+    <AssemblyName>Lesson16_Exceptions</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,14 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Fraction.cs" />
-    <Compile Include="Point.cs" />
+    <Compile Include="Excercise1.cs" />
+    <Compile Include="InvalidPasswordException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Size.cs" />
-    <Compile Include="Status.cs" />
-    <Compile Include="ToDoItem.cs" />
-    <Compile Include="TShirt.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
