@@ -10,9 +10,16 @@ namespace Lesson15_ValueTypes
     {
         public ToDoItem()
         {
+            Id = Guid.NewGuid();
             CreationTime = DateTime.Now;
         }
 
+        public ToDoItem(string name) : this()
+        {
+            Name = name;
+        }
+
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public Status Status { get; private set; }
         public DateTime CreationTime { get; }

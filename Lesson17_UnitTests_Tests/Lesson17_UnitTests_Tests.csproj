@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="TodoItemTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CalculatorTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -59,6 +60,10 @@
     <ProjectReference Include="..\Lesson15_ValueTypes\Lesson15_ValueTypes.csproj">
       <Project>{3d2a1bca-057b-4063-961c-6cf089a29a93}</Project>
       <Name>Lesson15_ValueTypes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lesson17_UnitTests\Lesson17_UnitTests.csproj">
+      <Project>{E229F447-F79B-49C0-BEAB-7D220E4C7B78}</Project>
+      <Name>Lesson17_UnitTests</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

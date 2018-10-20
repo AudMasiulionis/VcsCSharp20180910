@@ -42,7 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BadHoneyException.cs" />
+    <Compile Include="Bear.cs" />
+    <Compile Include="BearIsSleepingException.cs" />
     <Compile Include="Excercise1.cs" />
+    <Compile Include="Honey.cs" />
+    <Compile Include="HoneyType.cs" />
     <Compile Include="InvalidPasswordException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
