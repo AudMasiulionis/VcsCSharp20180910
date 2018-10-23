@@ -31,6 +31,6 @@ namespace Lesson16_Exceptions
             {
                 return $"Bear doesn't like { Honey.ToString() }";
             }
-        };
+        }
     }
 }

@@ -52,6 +52,7 @@
     <Compile Include="TodoItemTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CalculatorTests.cs" />
+    <Compile Include="ToDoListTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
