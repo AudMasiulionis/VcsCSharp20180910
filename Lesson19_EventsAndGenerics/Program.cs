@@ -1,5 +1,7 @@
 ﻿using Lesson15_ValueTypes;
+using Lesson19_EventsAndGenerics.Events;
 using Lesson19_EventsAndGenerics.Generics;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,11 +12,21 @@ namespace Lesson19_EventsAndGenerics
     {
         static void Main(string[] args)
         {
-            var gen = new MyGeneric<ToDoItem>();
+            //var btn = new ButtonWithoutDelegate();
+            //btn.Click();
 
-            var genericList = new List<string>();
+            var btn = new Button();
+            btn.OnButtonClick += Btn_OnButtonClick;
 
-            var genericDict = new Dictionary<int, string>();
+            btn.Click("ConsoleApp", new BtnClickArgs { Location = "VCS" });
+        }
+
+        private static void Btn_OnButtonClick(object sender, BtnClickArgs e)
+        {
+            var mailService = new MailService();
+            mailService.Send();
+            var crmService = new CrmService();
+            crmService.Send();
         }
     }
 }

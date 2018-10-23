@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\BtnClickArgs.cs" />
     <Compile Include="Events\Button.cs" />
     <Compile Include="Events\ButtonWithoutDelegate.cs" />
     <Compile Include="Events\CrmService.cs" />
