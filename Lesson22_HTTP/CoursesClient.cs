@@ -9,7 +9,7 @@ namespace Lesson22_HTTP
     {
         private const string uri = "https://vcsapi201809.azurewebsites.net/";
 
-        public Uri CreateProduct(Course course)
+        public Course CreateProduct(Course course)
         {
             using (var client = new HttpClient())
             {
@@ -18,7 +18,8 @@ namespace Lesson22_HTTP
                     client.PostAsync("api/courses", CreateJson(course)).Result)
                 {
                     response.EnsureSuccessStatusCode();
-                    return response.Headers.Location;
+                    var result = response.Content.ReadAsStringAsync().Result;
+                    return CreateCourseResponse(result);
                 }
             }
         }

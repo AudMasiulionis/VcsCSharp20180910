@@ -5,10 +5,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Lesson21_DesignPatternsTests
 {
     [TestClass]
-    public class UnitTest1
+    public class SingletonTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ShouldReturnSameInstace()
         {
             var singleton = Singleton.Instace;
             var singleton1 = Singleton.Instace;

@@ -1,5 +1,8 @@
 #pragma warning disable
 
+using Lesson15_ValueTypes;
+using System;
+
 namespace Lesson22_HTTP
 {
     class Program
