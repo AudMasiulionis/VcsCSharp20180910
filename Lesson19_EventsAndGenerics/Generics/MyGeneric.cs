@@ -4,10 +4,18 @@ namespace Lesson19_EventsAndGenerics.Generics
 {
     public class MyGeneric<T>
     {
+        public T GenericProp { get; set; }
+
         public void GetT(T value)
         {
             Console.WriteLine(value);
         }
+
+        public string Foo()
+        {
+            return "asd";
+        }
+
     }
 
     public class MyGenericWithClassConstraint<T> where T : class

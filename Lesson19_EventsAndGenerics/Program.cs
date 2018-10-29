@@ -15,10 +15,16 @@ namespace Lesson19_EventsAndGenerics
             //var btn = new ButtonWithoutDelegate();
             //btn.Click();
 
-            var btn = new Button();
-            btn.OnButtonClick += Btn_OnButtonClick;
+            //var btn = new Button();
+            //btn.OnButtonClick += Btn_OnButtonClick;
 
-            btn.Click("ConsoleApp", new BtnClickArgs { Location = "VCS" });
+            //btn.Click("ConsoleApp", new BtnClickArgs { Location = "VCS" });
+
+
+
+            var g = new MyGeneric<string>();
+         
+
         }
 
         private static void Btn_OnButtonClick(object sender, BtnClickArgs e)
