@@ -2,6 +2,7 @@
 
 using Lesson15_ValueTypes;
 using System;
+using System.Linq;
 
 namespace Lesson22_HTTP
 {
@@ -9,8 +10,14 @@ namespace Lesson22_HTTP
     {
         public static void Main()
         {
-            var client = new CoursesClient();
-            var a = client.GetProduct(1);
+            var client = new BeerClient();
+            var beers = client.GetBeers();
+
+            foreach (var item in beers.OrderBy(b => b.Price))
+            {
+                Console.WriteLine(item.ToString());
+            }
+
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Lesson22_HTTP
             {
                 client.BaseAddress = new Uri(uri);
                 using (HttpResponseMessage response =
-                    client.PostAsync("api/courses", CreateJson(course)).Result)
+                    client.PostAsJsonAsync("api/courses",course).Result)
                 {
                     response.EnsureSuccessStatusCode();
                     var result = response.Content.ReadAsStringAsync().Result;
@@ -65,7 +65,7 @@ namespace Lesson22_HTTP
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(uri);
-                using (HttpResponseMessage response = client.PutAsync("api/courses", CreateJson(course)).Result)
+                using (HttpResponseMessage response = client.PutAsJsonAsync($"api/courses/{course.Id}", CreateJson(course)).Result)
                 {
                     response.EnsureSuccessStatusCode();
                     var result = response.Content.ReadAsStringAsync().Result;
@@ -98,7 +98,8 @@ namespace Lesson22_HTTP
         private static StringContent CreateJson(Course course)
         {
             var json = JsonConvert.SerializeObject(course);
-            return new StringContent(json);
+            var content = new StringContent(json);
+            return content;
         }
     }
 }
