@@ -5,6 +5,11 @@ namespace Lesson21_DesignPatterns.Repositories
 {
     public class TodoItemFileRepository : IRepository<ToDoItem>
     {
+        public void Add(ToDoItem item)
+        {
+            throw new System.NotImplementedException();
+        }
+
         //todo add logic to use items from file
 
         public void Delete(int id)
