@@ -81,7 +81,7 @@ namespace Lesson23_SQL
                     command.Parameters.Add(new SqlParameter("firstName", item.FirtName));
                     command.Parameters.Add(new SqlParameter("age", item.Age));
                     command.Parameters.Add(new SqlParameter("id", item.Id));
-                    command.ExecuteReader();
+                    command.ExecuteNonQuery();
                 }
             }
         }
@@ -98,7 +98,7 @@ namespace Lesson23_SQL
                     command.Parameters.Add(new SqlParameter("lastName", item.LastName));
                     command.Parameters.Add(new SqlParameter("firstName", item.FirtName));
                     command.Parameters.Add(new SqlParameter("age", item.Age));
-                    command.ExecuteReader();
+                    command.ExecuteNonQuery();
                 }
             }
         }
