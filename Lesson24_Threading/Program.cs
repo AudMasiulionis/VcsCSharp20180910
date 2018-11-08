@@ -1,8 +1,5 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace Lesson24_Threading
 {
@@ -10,12 +7,49 @@ namespace Lesson24_Threading
     {
         static void Main(string[] args)
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
+            var car1 = new Car("Lambo", 200, 10, 1);
+            var car2 = new Car("Lada", 250, 8, 2);
+            var car3 = new Car("BMW", 180, 13, 1);
 
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+            var race = new Race(20000, new[] { car1, car2, car3 });
+            race.StartRace();
+        }
+
+        private static void StartCar(Car car)
+        {
+            while (true)
+            {
+                Thread.Sleep(3 * 1000);
+                car.Accelerate();
+                Console.WriteLine(car.Speed);
+            }
+        }
+
+        private static void Foo()
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                System.Console.WriteLine("Goodbye");
+            }
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+//var car1 = new Car("Lambo", 200, 10, 1);
+//var car2 = new Car("Lada", 250, 8, 2);
+//var car3 = new Car("BMW", 180, 13, 1);
+
+//var race = new Race(20000, new[] { car1, car2, car3 });
+//race.StartRace();

@@ -10,9 +10,15 @@ namespace Lesson23_SQL
         {
             var r = new PersonRepository();
 
-            var p = r.Get(1);
-            p.Age = 9999999;
-            r.Update(p);
+
+            r.Add(new Person
+            {
+                Age = 12,
+                FirtName = "123",
+                LastName = "222"
+            });
+
+
         }
     }
 }
